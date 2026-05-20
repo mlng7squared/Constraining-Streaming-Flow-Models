@@ -1,0 +1,11 @@
+numpy
+scipy
+torch
+matplotlib
+pandas
+diffusers
+tqdm
+torchdyn
+torchdiffeq
+jupyter
+ipykernel
