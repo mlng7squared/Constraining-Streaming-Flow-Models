@@ -10,17 +10,12 @@ and saves the rollout plot.
 Use a conda environment for the LASA scripts and notebook:
 
 ```bash
-cd /home/loongo/Projects/Research/shared/baselines/Constraining-Streaming-Flow-Models
+cd Constraining-Streaming-Flow-Models
 conda create -n casf-lasa python=3.10 -y
 conda activate casf-lasa
 pip install -r requirements.txt
 python -m ipykernel install --user --name casf-lasa --display-name "Python (casf-lasa)"
 ```
-
-`requirements.txt` is intended to cover the local LASA training script, the
-legacy CASF/SFP rollout modules copied under `casf/`, and the evaluation
-notebook. If you need a CUDA-specific PyTorch build, install the matching
-`torch` wheel for your driver/CUDA version before running the training command.
 
 ## Data
 
@@ -60,9 +55,4 @@ models/CASF_lasaTask_ah8_Sshape_sfpdObs_1000ep_lr0.0001_obsDim4_demo6-1_norm.pth
 ## Evaluate SFP vs CASF
 
 Open `notebooks/casf_lasa.ipynb` with the `casf-lasa` kernel and run all cells.
-The notebook evaluates only the held-out test demo and writes:
-
-```text
-outputs/casf_eval_lasa/sshape_demo06_metrics.csv
-outputs/casf_eval_lasa/sshape_demo06_rollout.png
-```
+The notebook evaluates only the held-out test demo and show quantitative and qualitative results comparing SFP and CASF.
